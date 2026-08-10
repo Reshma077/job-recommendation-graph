@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Recommendation Graph</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>Job Recommendation Graph</h1>
+
+            <p>
+                Discover jobs through skills, companies and locations.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Search -->
+
+        <section class="search-section">
+
+            <h2>Find Your Next Job</h2>
+
+            <p class="subtitle">
+                Search jobs based on your skills and preferred location.
+            </p>
+
+            <div class="search-form">
+
+                <input
+                    type="text"
+                    id="skill"
+                    placeholder="Skill e.g. Python"
+                >
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location e.g. Hyderabad"
+                >
+
+                <button onclick="findJobs()">
+                    Search Jobs
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Jobs -->
+
+        <section class="jobs-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Available Jobs</h2>
+
+                    <p>
+                        Jobs available in our graph database
+                    </p>
+                </div>
+
+                <button
+                    class="all-button"
+                    onclick="loadJobs()"
+                >
+                    Show All
+                </button>
+
+            </div>
+
+
+            <div id="jobsContainer" class="jobs-container">
+
+                <div class="loading">
+                    Loading jobs...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Job Recommendation Graph · Powered by CognoDB
+        </p>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
