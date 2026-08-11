@@ -1,37 +1,65 @@
 # Job Recommendation Graph
 
-A graph-based job recommendation web application built using Node.js, Express.js, JavaScript, and CognoDB.
+Discover jobs through skills, companies, and locations using a graph-based job recommendation application.
 
-The application connects jobs, companies, and skills using a graph data model and allows users to search for jobs based on skills and location.
+## Find Your Next Job
 
----
+Search jobs based on your skills and preferred location.
 
-## Project Overview
+The application connects jobs, companies, and skills using a graph data model and provides job recommendations based on graph relationships.
 
-Job Recommendation Graph helps users discover suitable job opportunities by exploring relationships between:
+## Features
 
-- Jobs
-- Companies
-- Skills
-- Locations
+- View available jobs
+- Search jobs by skill
+- Search jobs by location
+- Search jobs using skill and location together
+- Display company information
+- Display salary information
+- Display required skills
+- Graph-based job recommendations
+- Multi-hop graph traversal
+- Loading state
+- Empty search-result state
+- Error handling
 
-Instead of treating jobs as isolated records, the application models the relationships between jobs, companies, and required skills using CognoDB.
+## Technology Stack
 
----
+### Frontend
 
-## Why a Graph Database?
+- HTML
+- CSS
+- JavaScript
 
-A graph database is a good fit for this application because the important information is based on relationships.
+### Backend
 
-For example:
+- Node.js
+- Express.js
+
+### Database
+
+- CognoDB
+- openCypher
+
+### Database Driver
+
+- Official Neo4j JavaScript Driver
+
+### Tools
+
+- VS Code
+- Git
+- GitHub
+- dotenv
+- CORS
+
+## Graph Data Model
+
+The application uses three main node types:
+
+### Company
+
+Properties:
 
 ```text
-Company
-   |
-   | OFFERED_BY
-   |
-  Job
-   |
-   | REQUIRES
-   |
- Skill
+name
